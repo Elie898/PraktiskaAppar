@@ -1,5 +1,9 @@
+using Northwind.DataContext.SqlServer;
+using Northwind.EntityModels;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
+builder.Services.AddNorthwindContext();
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
