@@ -1,0 +1,26 @@
+﻿@model Northwind.EntityModels.Category
+
+@{
+    ViewData["Title"] = "Category Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="@Url.Content("~/images/category" + Model.CategoryId + ".jpeg")"
+                     class="img-fluid rounded-start"
+                     alt="@Model.CategoryName" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">@Model.CategoryName</h2>
+                    <p class="card-text">@Model.Description</p>
+                    <a href="/" class="btn btn-outline-primary mt-3">⬅ Tillbaka till startsidan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
