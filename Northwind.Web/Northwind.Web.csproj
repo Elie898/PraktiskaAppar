@@ -10,17 +10,14 @@
 		<None Include="Pages\index.cshtml" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Using Include="System.Console" Static="true" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Include="Pages\index.cshtml" />
-	  <None Include="wwwroot\index.html" />
-	</ItemGroup>
+	
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Northwind.DataContext.SqlServer\Northwind.DataContext.SqlServer.csproj" />
+	  <ProjectReference Include="..\Northwind.Razor.Employees\Northwind.Razor.Employees.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Using Include="System.Console" Static="true" />
 	</ItemGroup>
 
 </Project>
