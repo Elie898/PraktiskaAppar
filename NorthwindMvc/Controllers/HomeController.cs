@@ -1,8 +1,8 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Northwind.EntityModels;
 using NorthwindMvc.Models;
 
+using System.Diagnostics;
 namespace NorthwindMvc.Controllers;
 
 public class HomeController : Controller
@@ -19,16 +19,18 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+
         HomeIndexViewModel model = new(
 
-                 VisitorCount: Random.Shared.Next(1, 1001),
-                 Categories: db.Categories.ToList(),
-                 Products: db.Products.ToList()
+            VisitorCount: Random.Shared.Next(1, 1001),
+            Categories: db.Categories.ToList(),
+            Products: db.Products.ToList()
 
-             );
+        );
 
         return View(model);
-        
+
+
     }
 
     public IActionResult Privacy()
